@@ -1,0 +1,12 @@
+<dependencies>
+    <dependency>
+        <groupId>org.jsoup</groupId>
+        <artifactId>jsoup</artifactId>
+        <version>1.15.3</version> <!-- Latest version of Jsoup -->
+    </dependency>
+    <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>4.10.0</version> <!-- Latest version of OkHttp -->
+    </dependency>
+</dependencies>

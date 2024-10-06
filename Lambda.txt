@@ -1,0 +1,65 @@
+Пример 1: Лямбда-выражения с функциями высшего порядка
+
+// Функция высшего порядка, которая принимает лямбду и применяет её к числам
+fun applyOperation(a: Int, b: Int, operation: (Int, Int) -> Int): Int {
+    return operation(a, b)
+}
+
+fun main() {
+    val sum = applyOperation(5, 3) { x, y -> x + y }
+    val difference = applyOperation(5, 3) { x, y -> x - y }
+    val product = applyOperation(5, 3) { x, y -> x * y }
+
+    println("Sum: $sum")         // Вывод: Sum: 8
+    println("Difference: $difference") // Вывод: Difference: 2
+    println("Product: $product") // Вывод: Product: 15
+}
+Пример 2: Лямбда-выражения для фильтрации и преобразования коллекций
+
+fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5, 6)
+
+    // Фильтрация четных чисел
+    val evenNumbers = numbers.filter { it % 2 == 0 }
+    println("Even numbers: $evenNumbers") // Вывод: Even numbers: [2, 4, 6]
+
+    // Преобразование чисел в их квадраты
+    val squaredNumbers = numbers.map { it * it }
+    println("Squared numbers: $squaredNumbers") // Вывод: Squared numbers: [1, 4, 9, 16, 25, 36]
+}
+Пример 3: Замыкания
+
+fun counter(): () -> Int {
+    var count = 0
+    return {
+        count++
+    }
+}
+
+fun main() {
+    val myCounter = counter()
+
+    println(myCounter()) // Вывод: 1
+    println(myCounter()) // Вывод: 2
+    println(myCounter()) // Вывод: 3
+}
+Пример 4: Лямбда-выражения для обработки событий
+
+class Button {
+    // Хранит действие, которое нужно выполнить при нажатии
+    var onClick: (() -> Unit)? = null
+
+    fun click() {
+        onClick?.invoke()
+    }
+}
+
+fun main() {
+    val button = Button()
+
+    // Устанавливаем действие, которое должно быть выполнено при нажатии кнопки
+    button.onClick = { println("Button clicked!") }
+
+    button.click() // Вывод: Button clicked!
+}
+
