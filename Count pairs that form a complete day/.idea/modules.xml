@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/test.iml" filepath="$PROJECT_DIR$/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Count pairs that form a complete day.iml" filepath="$PROJECT_DIR$/Count pairs that form a complete day.iml" />
     </modules>
   </component>
 </project>
